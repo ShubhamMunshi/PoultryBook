@@ -1,0 +1,116 @@
+.flbodyyy-form{
+   border: 1px solid black;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   width: 20%;
+   margin-left: auto;
+   margin-right: 60%;
+   /* margin-top: 5%; */
+   padding: 4%;
+
+   background-color: rgba(255, 255, 255, 0.148); /* Adjust the alpha value for transparency */
+  backdrop-filter: blur(1px); /* Apply the glass-like effect */
+
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.flbodyyy-heading{
+    
+    word-spacing: 5px;
+    /* text-decoration: underline; */
+    text-align: center;
+    text-shadow: 1px 1px rgb(254, 60, 60);
+  /* background-color: rgba(240, 248, 255, 0.225); */
+   line-height: 0.01px;
+   /* border: 2px inset black; */
+   border-radius: 10px;
+   /* margin-bottom: 10%; */
+  
+
+
+}
+
+.flbodyyy-form input{
+    color: aliceblue;
+    margin-top: 10%;
+    margin-left: 20px;
+    border-radius: 6px;
+    background-color:rgb(1, 1, 1);
+}
+
+.flbodyyy-form-btn{
+    
+    display: block;
+    margin: auto;
+    margin-top: 10%; 
+    width: 100%;
+    line-height: 150%;
+    border-radius: 10px;
+    font-weight: bolder;
+}
+
+#flbodyyy{
+    padding-top: 10%;
+    padding-bottom: 20%;
+    /* background-image: url(../../Images/benjamin-davies-Zm2n2O7Fph4-unsplash.jpg); */
+    background-image: url(../../Images/31189.jpg);
+    background-size: cover;
+    font-size: large;
+    font-variant: small-caps;
+    color:black;
+}
+
+.flbodyyy-form label{
+    font-weight: bold ;
+    color: black;
+     
+}
+
+.flbodyyy-form div{
+    width: 150%;
+}
+
+
+
+.container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    border: 2px solid black;
+    margin: 50px auto;
+    overflow: hidden;
+  }
+  
+  .ball {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: center;
+  }
+  
+  .animate {
+    animation: moveBall 4s linear infinite;
+  }
+  
+  @keyframes moveBall {
+    0%, 100% {
+      transform: translateX(0) translateY(0);
+    }
+    25% {
+      transform: translateX(100%) translateY(0);
+    }
+    50% {
+      transform: translateX(100%) translateY(100%);
+    }
+    75% {
+      transform: translateX(0) translateY(100%);
+    }
+  }
+  

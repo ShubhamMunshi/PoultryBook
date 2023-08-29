@@ -1,0 +1,72 @@
+#prob .but {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#prob .but .s1 {
+    font-weight: bold;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    border-radius: 7px;
+    justify-content: space-evenly;
+    line-height: 30px;
+    max-width: 400px;
+}
+
+#prob h1, #sugges h1 {
+    text-align: center;
+    color: rgb(12, 12, 12);
+    text-shadow: -3px -2px rgb(255, 255, 2);
+}
+
+#prob, #sugges {
+    border: 2px inset black;
+    margin-bottom: 10%;
+}
+
+#prob #tb1 {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+}
+#sugges #tb2 {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#prob #tb1 tr td {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    width: 25%;
+}
+#sugges #tb2 tr td {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    width: 25%;
+}
+
+/* Media Query for Mobile Screens */
+@media only screen and (max-width: 480px) {
+    #tb tr td {
+        box-sizing: border-box;
+        width: 50%;
+        background-color: aqua;
+        
+    }
+    #tbod{
+        display: flex;
+        flex-wrap: wrap;
+        
+
+    }
+}
+.fprobsugges{
+    padding-bottom:1%;
+    background:linear-gradient(rgb(255, 211, 129),white,rgb(255, 211, 149),white);
+}

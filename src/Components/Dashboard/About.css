@@ -1,0 +1,20 @@
+/* AboutUs.css */
+
+.about-us-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    padding-bottom: 20%;
+  }
+  
+  .about-us-container h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  
+  .about-us-container p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  

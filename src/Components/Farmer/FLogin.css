@@ -1,0 +1,141 @@
+
+#flbodyyy{
+    /* background-image: url(../../Images/dash.jpg); */
+    /* background-position-x: center; */
+    /* object-fit: contain; */
+    padding-bottom:13%;
+    /* background-size: 100%; */
+    display: flex;
+    /* border: 10px solid green; */
+    /* padding-top: 5%; */
+    /* background: linear-gradient(45deg,cyan,white,cyan ,white); */
+    /* background-color: rgb(255, 226, 152); */
+    /* background: ; */
+    background-image:url(../../Images/benjamin-davies-Zm2n2O7Fph4-unsplash.jpg);
+    background-size: cover;
+}
+
+
+#flbodyyy #mm {
+    display: flex;
+    /* flex-flow: column; */
+    flex-direction: column;
+    justify-content: ce;
+    align-items: center;
+    /* border: 1px solid blue; */
+    /* margin-right: 1%; */
+    width: 60%;
+}
+
+#flbodyyy #mm #main {
+    border-radius: 15px;
+    border: 2px inset bisque;
+    width: 50%;
+    height: 100%;
+    /* margin-top: 50px; */
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.2); /* Adjust the alpha value for transparency */
+    backdrop-filter: blur(10px);
+    /* background-color: rgba(254, 235, 167, 0.9); */
+     display: block;
+     margin: auto;
+}
+
+#flbodyyy .login-form #im {
+ 
+   display: block;
+    width: 40%;
+    height: 40%;
+    margin: auto;
+    filter: drop-shadow(0 0 10px rgb(84, 241, 84));
+}
+
+#flbodyyy #main .i {
+    width: 100%;
+    border-radius: 20px;
+    height: 25px;
+}
+
+#flbodyyy .login-form #signinn {
+    margin-top: 20px;
+    background-color: rgb(237, 250, 151);
+    width: 100%;
+    font-style: normal;
+    font-weight: bolder;
+}
+
+/* #oo {
+    position: absolute;
+    z-index: -1;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    width: 100%; height: 100%;
+} */
+
+@media only screen and (max-width: 800px) {
+    #main {
+        width: 50%;
+    }
+}
+#mm h2{
+    margin-left: 10px; color:rgb(255, 170, 80); background-color: black; border: 5px solid ; border-radius: 20px;
+}
+
+
+/* Add the following rules to improve responsiveness */
+/* Use media queries for different screen sizes */
+@media only screen and (max-width: 768px) {
+    .login-form {
+      max-width: 70%; /* Adjust the width as needed */
+      padding: 20px; /* Add padding for better spacing */
+    }
+  }
+  
+  /* Mobile-specific styling */
+  @media only screen and (max-width: 480px) {
+    .login-heading {
+      font-size: 20px;
+    }
+  
+    .logo-image {
+      width: 40%;
+      height: auto;
+    }
+  
+    .i {
+      height: 30px; /* Increase the height for better touch interaction */
+    }
+  
+    /* Center-align the registration text */
+    .registration-text {
+      text-align: center;
+    }
+
+    
+  }
+
+/*   
+  #flbodyyy #flbg img{
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    /* height: 100%; */
+ 
+  /* } */ */
+
+
+
+/* #flleftimg img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+
+} */
+#flbodyyy .login-heading{
+  margin-top: 5%;
+}
+
+#flbodyyy #main{
+  margin-top: 100%;
+}

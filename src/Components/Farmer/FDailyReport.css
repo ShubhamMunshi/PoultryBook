@@ -1,0 +1,242 @@
+#whole #frm
+{
+  /* max-width: 500px; */
+ border: 1px solid black;
+ border-radius: 10px;
+ margin: 5px;
+ padding: 1%;
+}
+
+#whole #frm table tr td{
+   
+    box-sizing: border-box;
+    
+    padding: 1%;
+    /* z-index: 5; */
+
+
+}
+#whole .btns{
+    display: flex;
+    /* margin-top: 50px; */
+    justify-content: center;
+    align-items: center;
+    /* margin-left: 430%; */
+   
+
+    
+}
+#whole #content button
+{
+    
+    font-weight: bold;
+    color:white;
+    background-color: rgb(0, 0, 0);
+    border-radius: 7px;
+    justify-content: space-evenly;
+    line-height: 30px;
+      max-width: 400px;
+}
+#whole #content #subbtn{
+    margin-right: 50px;
+
+}
+#whole #header h1{
+    text-align: center;
+    color: red;
+    text-shadow: -3px -2px black;
+   
+}
+
+#whole #content table tr td input{
+    width: 100%;
+}
+#whole #content table tr th:last-child{
+    margin-right: 100px;
+}
+
+#whole #content table tr td select{
+    width: 100%;
+    margin-right: 100px;
+}
+
+#whole #content button:hover{
+
+animation-name: bgcoloranime;
+animation-duration: 1s;
+animation-iteration-count: infinite;
+animation-delay: 0ms;
+
+
+
+}
+
+@keyframes bgcoloranime
+{
+    0%{ box-shadow: -1px -2px 3px 1px rgb(255, 0, 68);}
+    25%{ box-shadow: -1px 2px 3px 1px rgb(98, 0, 255);}
+    50%{ box-shadow: 1px 2px 3px 1px rgb(0, 200, 255);}
+    75%{ box-shadow: 1px -2px 3px 1px rgb(0, 255, 68);}
+    100%{ box-shadow: -1px -2px 3px 1px rgb(251, 255, 0);}
+}
+
+@media screen and (max-width: 368px) {
+    #frm
+    {
+       
+
+      /* max-width: 500px; */
+     border: 1px solid black;
+     border-radius: 10px;
+     margin: 1px;
+     padding: 1px;
+     width: 768px;
+    }
+    
+    #frm table tr {
+       
+        box-sizing: border-box;
+        font-size: smaller;
+        padding: 1%;
+        /* z-index: 5; */
+    
+    
+    }
+    .btns{
+        display: flex;
+    /* margin-top: 50px; */
+    justify-content: center;
+    align-items: center;
+    
+        
+    }
+    #content button
+    {
+        
+        font-weight: bold;
+        color:white;
+        background-color: rgb(0, 0, 0);
+        border-radius: 7px;
+        justify-content: space-evenly;
+        line-height: 30px;
+    
+    }
+    #content #subbtn{
+        margin-right: 50px;
+    
+    }
+    #header h1{
+        text-align: center;
+        color: red;
+        text-shadow: -3px -2px black;
+       
+    }
+
+    
+    #firstrow td h3{
+        text-align: start;
+        font-size: 1px;
+        
+    }
+    
+    #content table tr td input{
+        width: 0%;
+    }
+
+}
+
+
+#whole .tbl{
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#whole .tblr2{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#whole .tblr2>td{
+    flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  width: 25%;
+}
+#whole .tblr2 td select{
+    flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+#whole{
+    padding-top: 5%;
+    background-color: lavender;
+    padding-bottom: 25%;
+}
+
+.Fdailyrport-endbatchbtn button{
+    width: 15%;
+    line-height: 200%;
+    margin-left: 2%;
+    margin-bottom: 2%;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+
+}
+.Fdailyrport-endbatchbtn button:hover{
+    background: radial-gradient(white,cyan);
+    color: black;
+    font-size: larger;
+    box-shadow: 0 0 5px black;
+    transition: all ease 1s;
+}
+
+
+.Fdailyrport-endbatchbtn button:hover{
+
+    animation-name: bgcoloranime;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-delay: 0ms;
+
+    
+
+}
+
+@keyframes bgcoloranime
+    {
+        0%{background-color: rgb(254, 180, 180); box-shadow: -1px -1px 1px 1px rgb(255, 0, 68);}
+        25%{background-color: rgb(248, 255, 146); box-shadow: -1px 1px 1px 1px rgb(98, 0, 255);}
+        50%{background-color: rgb(159, 255, 162); box-shadow: 1px 1px 1px 1px rgb(0, 200, 255);}
+        75%{background-color: rgb(159, 244, 255); box-shadow: 1px -1px 1px 1px rgb(0, 255, 68);}
+        100%{background-color: rgb(249, 159, 255); box-shadow: -1px -1px 1px 1px rgb(251, 255, 0);}
+    }
+
+
+
+    .Fdailyrport-endbatchbtn {
+        position: relative;
+    }
+    
+    .Fdailyrport-endbatchbtn .message {
+        display: none;
+        position: absolute;
+        top: 100%; /* Position it below the button */
+        left: 0;
+        background-color: #81ff78;
+        padding: 10px;
+        border: 1px solid #ccc;
+    }
+    
+    .Fdailyrport-endbatchbtn button:hover + .message {
+        display: block;
+    }
+    
+ 

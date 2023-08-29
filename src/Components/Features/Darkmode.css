@@ -1,0 +1,20 @@
+
+.dark-mode-toggle {
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .dark {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .light {
+    background-color: #fff;
+    color: #333;
+    background-color: rgb(255, 229, 196);
+  }
+  

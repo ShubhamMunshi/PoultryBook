@@ -1,0 +1,213 @@
+
+
+@keyframes eggcolor
+{
+   0%{  filter: drop-shadow(0 0 10px rgb(255, 7, 7));}
+   20%{ filter: drop-shadow(0 0 10px rgb(255, 225, 28));} 
+   40% { filter: drop-shadow(0 0 10px rgb(117, 247, 85));}
+   60% { filter: drop-shadow(0 0 10px rgb(85, 247, 212));}
+   80% { filter: drop-shadow(0 0 10px rgb(123, 85, 247));}
+   100%{ filter: drop-shadow(0 0 10px rgb(244, 85, 247));}
+}
+  @keyframes moveUpDown {
+    0% {
+      transform: translateY(0);
+    }
+    
+    50% {
+      transform: translateY(50px);
+    }
+    
+    
+    100% {
+      transform: translateX(0px);
+    }
+
+    
+    
+  }
+
+
+
+  @keyframes moveInCircle {
+    0% {
+      transform: translateX(0) translateY(-200px) rotate(0);
+      /* background-color: red; */
+    }
+    25% {
+      transform: translateX(200px) translateY(0) rotate(90deg);
+      /* background-color: blue; */
+    }
+    50% {
+      transform: translateX(0) translateY(200px) rotate(180deg);
+      /* background-color: yellow; */
+    }
+    75% {
+      transform: translateX(-200px) translateY(0) rotate(270deg);
+      /* background-color: green; */
+    }
+    100% {
+      transform: translateX(0) translateY(-200px) rotate(360deg);
+      /* background-color: red; */
+    }
+  }
+
+
+
+ @keyframes circle{
+  0% {
+      transform: translateX(50px) translateY(0);
+      /* background-color: red; */
+    }
+    25% {
+      transform: translateX(0) translateY(50px);
+      /* background-color: blue; */
+    }
+    50% {
+      transform: translateX(-50px) translateY(0);
+      /* background-color: yellow; */
+    }
+    75% {
+      transform: translateX(0) translateY(-50px);
+      /* background-color: green; */
+    }
+    100% {
+      transform: translateX(50px) translateY(0);
+      /* background-color: red; */
+    }
+  }
+
+
+  
+
+
+    @media only screen and (max-width:480px) {
+
+      #slogan
+      {
+        font-style: italic;
+        font-size: medium;
+        max-width: 60%;
+        height: 50%;
+    
+        padding: 10px;
+        text-align: center;
+         position: absolute;
+         
+        border-radius: 25px;
+        border: 1px inset white;
+    
+        /* background: linear-gradient(to right, white ,  rgb(242, 186, 244) 50% ,rgb(136, 247, 255) 50% , white 100%); */
+        background: radial-gradient(( red 10%));
+        
+      }
+
+      .boddyy{
+        display: flex;
+        flex-direction: column-reverse;
+      }
+            
+      .slideshow-container
+      {margin-top: -1%;
+        /* border: 1px solid black; */
+        /* background-color: antiquewhite; */
+        
+      }
+      #egg
+      {
+       height: 150px;
+       animation-name: moveUpDown,eggcolor;
+  
+
+      animation-duration: 5s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      padding-bottom: 10%;
+  
+      }
+
+    }
+
+
+    /*================== ///////////////////////////////////////////////// ===================*/
+
+    .maindash {
+      height: 100vh;
+        border: 2px solid red;
+            display: grid;
+            grid-template-columns: 40% 49%;
+            grid-gap: 2%;
+            /* background-size: cover; */
+            padding-bottom: 2%;
+           /* background: url(../../Images/Untitleddesign.png); */
+       
+
+    }
+
+    .maindash #dashwallp
+    {
+      position: absolute;
+      right: 0;
+      width: 80%;
+      height: 80%;
+      z-index: -1;
+    }
+
+    .maindash-imageegg{
+      /* border: 2px solid blue; */
+    }
+
+    .maindash-slogan{
+      /* border: 2px solid greenyellow; */
+          font-size: xx-large;
+          padding-bottom: 5%;
+    }
+
+    .maindash-slogan img{
+      width: 50%;
+      /* border: 1px solid red; */
+      margin-left: 5%;
+    
+    }
+
+    .maindash-slogan #fh1{
+      /* font-size: xx-large; */
+      line-height: 100%;
+      font-weight: bold;
+      font-stretch: expanded;
+      padding-top: 0;
+      padding-left: 5%;
+      color: rgb(0, 0, 0);
+      text-shadow: 4px 1px 1px rgb(9, 226, 255);
+      word-spacing: 10px;
+        
+
+    }
+    .maindash-slogan #sh1{
+      text-align: center;
+      padding-left: 0%;
+      color: rgb(0, 0, 0);
+      text-shadow: 2px 2px rgb(198, 255, 27);
+
+    }
+  
+
+   
+
+      
+/*below will be the for egg    */
+ #egg
+ {
+  padding-left: 20%;
+  filter: drop-shadow(0 0 10px rgb(244, 85, 247));
+ }
+
+ #egg {
+  animation-name:moveUpDown,eggcolor;
+  
+  /* animation-name: moveInCircle; */
+    /* animation-name: moveUpDown; */
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }

@@ -1,0 +1,38 @@
+#mainb table{
+   margin-top: 5%;
+   margin-bottom: 2%;
+    width: 100%;
+   border-collapse: collapse;
+   border:2px solid white;
+   
+}
+
+#mainb tr>td{
+    padding: 1%;
+    text-align: center;
+    background-color: rgb(255, 248, 144);
+   
+}
+
+#mainb table tr:first-child{
+    height: 50px;
+    background-color: black;
+    color: white;
+    border-color: aliceblue;
+    
+}
+
+
+
+#mainb{
+    display: block;
+    margin: auto;
+    /* border: 1px solid red; */
+    /* background-color: rgb(184, 255, 79); */
+    border-radius: 50px;
+    padding: 2%;
+    /* background-color: aqua; */
+   
+}
+
+

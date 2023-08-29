@@ -1,0 +1,60 @@
+.Cdash-outerdiv button{
+    /* background-color: rgb(217, 177, 255); */
+    width: 100%;
+    height: 100px;
+}
+
+.Cdash-outerdiv{
+    display: flex;
+    flex-direction: row-reverse;
+    /* border: 5px solid red; */
+    padding-top: 6%;
+    padding-bottom:10% ;
+    /* background: linear-gradient(to right,#407C87,#A5DBDD,#EEF1F6,#D3E1E2); */
+    /* background:linear-gradient(to right,#38B4D0,#FAC7C3,#FFF7EC,#A9E2F5); */
+    /* background: radial-gradient(#3c3d42,#9ccd62,#f6f8e2,#e0ddca); */
+    background: radial-gradient(rgb(255, 255, 255),rgb(255, 215, 141),rgb(255, 216, 117));
+    
+    
+}
+
+
+.Cdash-outerdiv-features{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid black; */
+     width: 60%;
+     margin-left: 10%;
+     text-align: center;
+     line-height:50px;
+    
+}
+
+.Cdash-outerdiv-features span{
+    font-size: x-large;
+    width: 500px;
+    max-width: 50%;
+    border-radius: 5px;
+    text-align: center;
+    /* justify-content: center; */
+    border: 1px inset rgb(0, 0, 0);
+    background:linear-gradient(45deg , rgb(178, 255, 178) , rgb(253, 253, 253));
+}
+
+
+.Cdash-outerdiv-features span button:hover{
+    font-size: larger;
+    font-weight: bolder;
+   color: black;
+    background:linear-gradient(45deg , rgb(106, 240, 255) , rgb(7, 52, 255));
+    transition: all ease 1s;
+  }
+
+  .Cdash-outerdiv-image img{
+    filter: drop-shadow(0 0 5px );
+  }
+
+  

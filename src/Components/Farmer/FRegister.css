@@ -1,0 +1,126 @@
+
+
+
+.fregisterpg .form-container {
+    background-color: #FFF;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .fregisterpg .form-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+  }
+
+  .fregisterpg .fregisterpg  .form-group label {
+    color: #555;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    transition: transform 0.3s ease;
+  }
+
+  .fregisterpg  .form-group input[type="text"],
+  .form-group input[type="email"],
+  .form-group input[type="tel"],
+  .form-group input[type="password"],
+  .form-group textarea {
+    border-radius: 20px;
+    background-color: #F5F5F5;
+    border: none;
+    padding: 10px;
+    color: #333;
+    transition: transform 0.3s ease;
+  }
+
+  .fregisterpg .form-group i {
+    color: #777;
+    transition: transform 0.3s ease;
+  }
+
+  .fregisterpg .form-group input[type="text"]:focus,
+  .form-group input[type="email"]:focus,
+  .form-group input[type="tel"]:focus,
+  .form-group input[type="password"]:focus,
+  .form-group textarea:focus,
+  .form-group i:hover {
+    transform: scale(1.1);
+  }
+
+  .fregisterpg .btn-primary {
+    background-color: #1E90FF;
+    border: none;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  .fregisterpg .btn-primary:hover {
+    background-color: #00BFFF;
+    transform: scale(1.1);
+  }
+
+  /* Animation for Graphics Symbols */
+  .fregisterpg .graphic-container i {
+    font-size: 30px;
+    color: #1E90FF;
+    animation: rotate 1.5s infinite linear;
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .fregisterpg #outsidef{
+    display: flex;
+    flex-direction: column;
+     margin: auto;
+     border: 1px solid black;
+     max-width: 60%;
+     padding: 2%;
+     background:linear-gradient(rgb(182, 88, 182),rgb(135, 95, 255),rgb(83, 201, 201));
+     justify-content: center;
+     align-items: center;
+  }
+  .fregisterpg #main3
+  {
+    background:linear-gradient(45deg,red,white,cyan,white);
+  }
+
+
+  .fregisterpg #rstbtn{
+    display: none;
+
+  }
+
+  .fregisterpg .submitbtnn{
+    display: block;
+    margin: auto;
+    font-size: larger;
+    font-weight: bolder;
+    margin-top: 5%;
+    border-radius: 10px;
+    height: 50px;
+    width: 100%;
+    background-color: #ffa200;
+  }
+
+  
