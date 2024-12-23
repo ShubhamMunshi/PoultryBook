@@ -9,6 +9,8 @@ import com.dac.project.Repository.DailyReportFarmerRepo;
 
 import com.dac.project.model.DailyReportData;
 import com.dac.project.model.Dailyrpforfarmerfetch;
+import com.dac.project.model.Farmerreportbyid;
+import com.dac.project.model.Fetchbatch;
 
 @Service
 public class DailyReportServiceImpl implements DailyReportService {
@@ -28,8 +30,8 @@ public class DailyReportServiceImpl implements DailyReportService {
 //	}
 
 	@Override
-	public List<DailyReportData> getDailyReportByBid(String bid) {
-		List<DailyReportData> datta = (List<DailyReportData>)dailyReportFarmerRepo.findlistbyid(bid);
+	public List<DailyReportData> getDailyReportByBid(Farmerreportbyid farmerreportbyid) {
+		List<DailyReportData> datta = (List<DailyReportData>)dailyReportFarmerRepo.findlistbyid(farmerreportbyid.getFarmerId(),farmerreportbyid.getCompanyId());
 		return datta;
 	 
 	}

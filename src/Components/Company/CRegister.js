@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import  "../Company/CRegister.css"
 import { useState } from "react";
 import 'react-toastify/dist/ReactToastify.css';
@@ -12,7 +12,7 @@ export const CRegister=()=>
   
   
   
-  
+  const navigate = useNavigate();
    
 
     const[ companyname , setcompanyname] = useState("");
@@ -24,43 +24,42 @@ export const CRegister=()=>
     const[companyusername,setcompanyusername]=useState("");
     const[companypassword,setcompanypassword]=useState("");
     const[aboutcompany,setaboutcompany]=useState("");
-    const Company = {companyname,ownername,companyemail,companycontact,companyaddress,companyusername,companypassword,aboutcompany};
 
+  
+
+    const Company = {companyname,ownername,companyemail,companycontact,companyaddress,companyusername,companypassword,aboutcompany};
+        
+    const [Companyobje,setcompanyobje] =useState(Company);
    const handlecompinfo = async(e)=>{
           e.preventDefault();
           // const Company = {companyname,ownername,companyemail,companycontact,companyaddress,companyusername,companypassword,aboutcompany};
-         
+           
 
           for (const key in Company) {
             if (Company[key] === undefined || Company[key] === null || Company[key] === '')
              {
-              toast.error("kuch to data dal de bhai",toast.POSITION.TOP_RIGHT);
+              toast.error("Fill all data fields first",toast.POSITION.TOP_RIGHT);
       
               return false;
             }
           
-         
+          }
 
 
-      else{
+
         console.log(Company);
-           if( await addCompany(Company))
-            {
-            showbanner();
-            }    
+          //  if( await addCompany(Company))
+          //   {
+          
+          //   }    
          
-        }
-     }
-  }
+            navigate('/verifycompany',{state:Company});
+     
+          }
 
 
 
-     const showbanner = () => {
-      console.log("calling toast");
-      toast.success('Company Registered Successfully!', {
-          position: toast.POSITION.TOP_CENTER
-      });
-  };
+  
 
 
     return(<>
@@ -110,7 +109,7 @@ export const CRegister=()=>
             <label for="aboutcompanyany"><i className="fas fa-info-circle"></i> About Company</label>
             <textarea className="form-control" id="aboutcompanyany" rows="4" placeholder="Enter information about the company" value={aboutcompany} onChange={(e)=>{setaboutcompany(e.target.value)}}></textarea>
           </div>
-          <button type="submit" className="btn btn-primary btn-block" onClick={handlecompinfo}><i className="fas fa-check" ></i> Submit</button>
+          <button type="submit" className="btn btn-primary btn-block" onClick={handlecompinfo}><i className="fas fa-check" ></i> Verify & Submit</button>
                <ToastContainer/>
         
         </form>

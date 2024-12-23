@@ -24,6 +24,7 @@
     text-align: center;
     margin-bottom: 30px;
     color: #333;
+    
   }
 
   .fregisterpg .fregisterpg  .form-group label {
@@ -99,10 +100,24 @@
      background:linear-gradient(rgb(182, 88, 182),rgb(135, 95, 255),rgb(83, 201, 201));
      justify-content: center;
      align-items: center;
+     display: flex;
+   flex-direction: column;
+   display: block;
+   
+    margin: auto;
+    border: 1px solid black;
+    max-width: 600px;
+    padding: 2%;
+    background-color: #fffda3;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: inset 0 3px 15px rgba(0,0,0,.5), 0 4px 6px rgba(0,0,0,0.45);
   }
   .fregisterpg #main3
   {
     background:linear-gradient(45deg,red,white,cyan,white);
+
   }
 
 
@@ -121,6 +136,21 @@
     height: 50px;
     width: 100%;
     background-color: #ffa200;
+  }
+
+  .fregisterpg select,input[type="date"],#aadhar,#pin{
+    width: 100%;
+  }
+
+  .fregisterpg input[type="file"],#seven,#eight{
+    /* background-color: #1E90FF; */
+  }
+
+
+  .fregisterpg .submitbtnn:hover{
+    background-color: black;
+    color:  white;
+
   }
 
   

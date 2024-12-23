@@ -13,7 +13,8 @@
     /* background: linear-gradient(to right,#407C87,#A5DBDD,#EEF1F6,#D3E1E2); */
     /* background:linear-gradient(to right,#38B4D0,#FAC7C3,#FFF7EC,#A9E2F5); */
     /* background: radial-gradient(#3c3d42,#9ccd62,#f6f8e2,#e0ddca); */
-    background: radial-gradient(rgb(255, 255, 255),rgb(255, 215, 141),rgb(255, 216, 117));
+    background: linear-gradient(lightblue,cyan);
+    /* color: lightblue; */
     
     
 }
@@ -26,22 +27,32 @@
     align-items: center;
     justify-content: center;
     /* border: 1px solid black; */
-     width: 60%;
-     margin-left: 10%;
+     width: 100%;
+     /* margin-left: ; */
      text-align: center;
      line-height:50px;
+   
+     
     
 }
 
 .Cdash-outerdiv-features span{
     font-size: x-large;
     width: 500px;
-    max-width: 50%;
+    max-width: 100%;
     border-radius: 5px;
     text-align: center;
+    font-size: larger;
     /* justify-content: center; */
     border: 1px inset rgb(0, 0, 0);
     background:linear-gradient(45deg , rgb(178, 255, 178) , rgb(253, 253, 253));
+    box-shadow: inset 0 3px 6px rgba(0,0,0,0.16), 0 4px 6px rgba(0,0,0,0.45);
+}
+
+.Cdash-outerdiv-features span button{
+    font-size: large;
+    font-weight: bold;
+    background: linear-gradient(rgb(255, 195, 84),rgb(250, 250, 90));
 }
 
 
@@ -49,11 +60,12 @@
     font-size: larger;
     font-weight: bolder;
    color: black;
-    background:linear-gradient(45deg , rgb(106, 240, 255) , rgb(7, 52, 255));
+    background:linear-gradient(45deg , rgb(94, 239, 255) , rgb(85, 116, 255));
     transition: all ease 1s;
   }
 
   .Cdash-outerdiv-image img{
+    width: 50%;
     filter: drop-shadow(0 0 5px );
   }
 

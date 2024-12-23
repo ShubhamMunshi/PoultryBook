@@ -23,12 +23,12 @@ export const FDash = () => {
   useEffect(()=>{
     
    
-    // const apiUrl= 'http://192.168.29.85:8080';
     try{
     let id =localStorage.getItem("pk");
 
-
-    axios.get(`${apiUrl}/Getfarm/${id}`).then((resp)=>{
+    if(id!==null)
+     {
+      axios.get(`${apiUrl}/Getfarm/${id}`).then((resp)=>{
         console.log(resp);
         localStorage.setItem("cboobs",resp.data.companyId);
 
@@ -43,8 +43,9 @@ export const FDash = () => {
       localStorage.setItem("stbitch",resp.data.batchStatus);
       localStorage.setItem("flbthno",resp.data.batchNo);
      });
-       
+      
     })
+  }
   }
   catch(error)
   {
@@ -56,7 +57,7 @@ export const FDash = () => {
 
     //////=========/////////
         // Your effect logic here
-        // const apiUrl = "http://localhost:8080";
+        
         try{
 
         const batchNo = localStorage.getItem("flbthno");
@@ -131,7 +132,7 @@ export const FDash = () => {
         <span><Link to="/Farmerlogin/dashboard/profile" className="active">Profile</Link></span>
           <span><Link to="/dailyreportoption" className="active">Daily Report</Link></span>
           <span><Link to="/Farmerlogin/dashboard/problemsolution" className="active">Problems <br/> & <br/> Suggestions</Link></span>
-          <span><Link to="#" className="active">Learn</Link></span>
+          <span><Link to="/learnforfarmer" className="active">Learn</Link></span>
           <span><Link to="/Getreportforfarmer" className="active">Get Report</Link></span>
         </div>
       </div>

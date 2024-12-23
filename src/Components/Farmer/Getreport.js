@@ -62,9 +62,9 @@ export const Getreport = () => {
 
     else
     {
-      toast.error("Bhai tum naye ho pehle batch banao",{position:'top-right'});
+      toast.error("First Create batch",{position:'top-right'});
     }
-  });
+  },[]);
 
   return (
     <>

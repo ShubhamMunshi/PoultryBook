@@ -7,6 +7,7 @@ import { FarmerDetails } from "./FarmerDetails"
 import axios from "axios"
 import clgnpgimg from "../../Images/6101100.png"
 import { ToastContainer, toast } from "react-toastify"
+import { apiUrl } from "../../Api/AllApis"
 // import {Helmet} from "react-helmet";
 export const CLogin = () => {
     //  localStorage.removeItem("compIdVar");
@@ -18,8 +19,7 @@ export const CLogin = () => {
            setseepassword(!seepassword);
     };
 
-    const apiUrl = "http://localhost:8080";
-    // const apiUrl= 'http://192.168.29.85:8080';
+    
     const[compid ,setcompid]= useState("");
     const [comppass,setcomppass]=useState("");
    

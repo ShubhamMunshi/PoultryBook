@@ -4,11 +4,12 @@ import {  useState } from "react"
 import "./CreateBatch.css";
 import { Link, Navigate } from "react-router-dom";
 import { apiUrl } from "../../Api/AllApis";
+import { ToastContainer, toast } from "react-toastify";
 export const CreateBatch=()=>{
 
    
 
-    // const apiUrl= 'http://192.168.29.85:8080';
+   
    const [startDate,setstartdate] =useState("");
    const [totalBirds,settotalbirds] =useState("");
    const [batchStatus,setbactchstateus] =useState(true);
@@ -45,21 +46,30 @@ const sendBatchReg = async (e) => {
     
 
     try {
-    const response = await axios.post(`${apiUrl}/batchregister`, batchdata);
-    console.log(response.data);
+    await axios.post(`${apiUrl}/batchregister`, batchdata).then((res)=>{
+      toast.success("Batch Registered successfully !",{position:'top-right',autoClose:1000});
+          
+       setTimeout(()=>{
+        document.getElementById("ds").click();
+       },1200)
+
+    })
+    
      
 
   } catch (error) {
+    toast.error("batch registration failed due to server error",{position:'top-right'});
     console.error("Error:", error);
   }
 
-  document.getElementById("ds").click();
+  
 };
      
    
 
     return(<>
     <div className="crbatch"> 
+    <ToastContainer/>
     <Link to="/Farmerlogin/dashboard" id="ds" onClick={()=>{
       let farmid =localStorage.getItem("pk");
      let  compid =localStorage.getItem("cboobs");

@@ -26,13 +26,23 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.dac.project.model.CompLogin;
 import com.dac.project.model.Company;
+import com.dac.project.model.Customer;
+import com.dac.project.model.Customerlistfetch;
 import com.dac.project.model.DailyReportData;
 import com.dac.project.model.FarmLogin;
 import com.dac.project.model.FarmerProblems;
+import com.dac.project.model.Farmerreportbyid;
+import com.dac.project.model.Fetchbatch;
+import com.dac.project.model.MyEmail;
+import com.dac.project.model.OtpVerf;
 import com.dac.project.model.Problemlistfarmer;
+import com.dac.project.model.Solutionofproblem;
 import com.dac.project.services.CompanyService;
+import com.dac.project.services.CustomerServices;
 import com.dac.project.services.DailyReportService;
+import com.dac.project.services.EmailServices;
 import com.dac.project.services.FarmerProblemService;
+import com.dac.project.services.SolutionproblemService;
 
 
 
@@ -41,6 +51,7 @@ import com.dac.project.services.FarmerProblemService;
 
 @RestController
 @CrossOrigin
+//@CrossOrigin(origins = "http://192.168.43.25:3000")
 //@CrossOrigin(origins = "http://192.168.29.85:3000")
 
 public class CompanyController {
@@ -53,6 +64,15 @@ public class CompanyController {
 	
 	@Autowired
 	FarmerProblemService farmerProblemService;
+	
+	@Autowired
+	SolutionproblemService solutionproblemService;
+	
+	@Autowired
+	CustomerServices customerServices;
+	
+	@Autowired
+	EmailServices eml;
 	
 	@PostMapping("/CompanyRegistration")
 	@ResponseBody
@@ -99,10 +119,11 @@ public class CompanyController {
 	}
 	
 	
-	 @GetMapping("/getfmdailyreport/{id}")
-	    public List<DailyReportData> getFarmerDailyReport(@PathVariable("id") String bid) {
+	 @PostMapping("/getfmdailyreport")
+	    public List<DailyReportData> getFarmerDailyReport(@RequestBody Farmerreportbyid farmerreportbyid) {
 		 System.out.println("inside server");
-		 List<DailyReportData> ls=  (List<DailyReportData>)dailyReportService.getDailyReportByBid(bid);
+		 List<DailyReportData> ls=  (List<DailyReportData>)dailyReportService.getDailyReportByBid(farmerreportbyid);
+		 System.out.println(ls);
 	        return ls;
 	    }
 	 
@@ -129,7 +150,59 @@ public class CompanyController {
 		 return farmerProblemService.getallproblems(problemlistfarmer);
 	 }
 	 
+	 
+	 @PostMapping("/saveproblemsolution")
+	 public String saveproblemsolution(@RequestBody Solutionofproblem solutionofproblem)
+	 {
+		 solutionproblemService.savesolution(solutionofproblem);
+		   
+		 return "data successfully added ";
+	 }
+	 
+	 
+	  @PostMapping("/sendotp")
+			public String sendMl(@RequestBody MyEmail ml) {
+				
+				System.out.println("In controleer" +ml);
+				eml.sendOtpEmail(ml.getEmail());
+				return "otp genrated";
+			}
+	 
+	  
+	  @PostMapping("/verify")
+		public Boolean verifyOtp(@RequestBody OtpVerf otp) {
+			System.out.println(otp);
+			if(eml.getOtp().equals(otp.getOtp()) == true) 
+			{
+				otp.setOtp(null);
+	
+				return true;
+			 
+			 }
+			else
+				return false;
+		}
+	  
+	  
+	  @PostMapping("/registerCust")
+		public Boolean registerCustomer(@RequestBody Customer customer) {
+			
+			Boolean res = customerServices.regCustomer(customer);
+			return res;
+		}
+	  
+	  @PostMapping("/getAllCustomers")
+		public List<Customer> getCustomerDetails(@RequestBody Customerlistfetch custDt){
+			
+			
+			List<Customer> cList = customerServices.getAllcust(custDt);
+			
+			return cList;
+		}
 	
 }
+
+
+
 
 

@@ -18,7 +18,7 @@ export const FLogin = () => {
   };
 
 
-  // const apiUrl= 'http://192.168.29.85:8080';
+ 
   // for login verification//====================
 
   const [farid, setusn] = useState("");

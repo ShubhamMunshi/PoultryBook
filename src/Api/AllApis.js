@@ -4,8 +4,9 @@ import axios from "axios";
 
 // const apiUrl = "http://localhost:8080/Companylogin/CompanyRegistration";
 
-export const apiUrl ="http://localhost:8080";
+export const apiUrl ="http://localhost:8081";
 // export const apiUrl= 'http://192.168.29.85:8080';
+// export const apiUrl= 'http://192.168.43.25:8080';
 
 
 
@@ -65,3 +66,14 @@ export const  addfarmer = async(data)=>
 //    }
    
 // }
+
+export const  addCustomer = async(data)=>
+{
+    try{
+       return await axios.post(`${apiUrl}/registerCust`,data)
+    }
+    catch(error)
+    {
+        console.log("error while calling api",error.message);
+    }
+}

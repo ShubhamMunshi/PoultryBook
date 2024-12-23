@@ -5,13 +5,15 @@ import { apiUrl } from "../../Api/AllApis";
 export const  FamerDailyRpDisp =()=>{
 
    
-   //  const apiUrl= 'http://192.168.29.85:8080';
-    const[batchId ,setbat] =useState();
+   
+    const[farmerId ,setfarm] =useState();
+    const companyId = localStorage.getItem("compIdVar");
+    const dto = {companyId ,farmerId};
     // const[id,setidd]=useState(batchId);
     const[alldatainfo ,setalldatatinfo] =useState([]);
   const getdata =async(e)=>{
       e.preventDefault();     
-     await axios.get(`${apiUrl}/getfmdailyreport/${batchId}`).then((result)=>{
+     await axios.post(`${apiUrl}/getfmdailyreport`,dto).then((result)=>{
         console.log(result.data);
         setalldatatinfo(result.data);
     })
@@ -27,8 +29,8 @@ export const  FamerDailyRpDisp =()=>{
         <form>
            <table>
 
-             <tr><th>BatchId</th></tr>   
-             <tr><td><input type="number" onChange={(e)=>{setbat(e.target.value)}}/></td></tr>
+             <tr><th>FarmerId</th></tr>   
+             <tr><td><input type="text" onChange={(e)=>{setfarm(e.target.value)}}/></td></tr>
               <tr><th><button onClick={getdata}>Submit</button>  </th> </tr>      
 
            </table>

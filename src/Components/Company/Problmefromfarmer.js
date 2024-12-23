@@ -49,6 +49,7 @@ import { useEffect, useState } from "react";
 import "./Problmefromfarmer.css";
 
 import { ToastContainer, toast } from "react-toastify";
+import { Link, useNavigate } from "react-router-dom";
 
 export const Problmefromfarmer = () => {
   const [probs, setprobs] = useState(
@@ -81,6 +82,9 @@ export const Problmefromfarmer = () => {
     });
   };
 
+
+
+   const navigate =useNavigate();
   return (
     <>
     <ToastContainer/>
@@ -96,6 +100,7 @@ export const Problmefromfarmer = () => {
                 <th>Problem</th>
                 <th>Problem Description</th>
                 <th>Problem Image</th>
+                <th>Give Suggestion</th>
               </tr>
             </thead>
             <tbody>
@@ -109,7 +114,7 @@ export const Problmefromfarmer = () => {
                   <td>{info.remark}</td>
                   <td>
                     <img
-                      src={`http://localhost:8080/images/problems/${info.problemImg}`}
+                      src={`http://localhost:8081/images/problems/${info.problemImg}`}
                       alt={`Problem ${info.srNo}`}
                       className={`enlargeable-photo ${
                         enlargedImages[index] ? "enlarged" : ""
@@ -117,10 +122,18 @@ export const Problmefromfarmer = () => {
                       onClick={() => toggleEnlarged(index)}
                     />
                   </td>
+                  <td> <button onClick={()=>{
+
+                    navigate('/gievsuggestinforprob',{state:info});
+              // document.getElementById("sgstbtn").click();
+
+                  }}>Suggestion</button></td>
                 </tr>
               ))}
             </tbody>
           </table>
+
+          <Link to="/gievsuggestinforprob" id="sgstbtn"></Link>
         </div>
       </div>
     </>

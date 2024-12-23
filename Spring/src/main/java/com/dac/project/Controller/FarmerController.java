@@ -24,14 +24,18 @@ import com.dac.project.model.Farmer;
 import com.dac.project.model.FarmerProblems;
 import com.dac.project.model.Farmerlist;
 import com.dac.project.model.Fetchbatch;
+import com.dac.project.model.Getsolutionvalidation;
+import com.dac.project.model.Solutionofproblem;
 import com.dac.project.model.Totalbirdsmort;
 import com.dac.project.services.BatchRegistrationService;
 import com.dac.project.services.DailyReportService;
 import com.dac.project.services.FarmerProblemService;
 import com.dac.project.services.FarmerService;
+import com.dac.project.services.SolutionproblemService;
 
 @RestController
 @CrossOrigin
+//@CrossOrigin(origins = "http://192.168.43.25:3000")
 //@CrossOrigin(origins = "http://192.168.29.85:3000")
 public class FarmerController {
 	  
@@ -47,6 +51,9 @@ public class FarmerController {
 	 @Autowired
 	 FarmerProblemService farmerProblemService;
 
+	 
+	 @Autowired
+	 SolutionproblemService solutionproblemService;
 
 	@PostMapping("/FarmerRegistration")
 	@ResponseBody
@@ -162,6 +169,16 @@ public class FarmerController {
 		           farmerProblemService.saveproblem(farmerProblems);
 		           return "problem saved successfully";
 	  }
+	  
+	  @PostMapping("/getsolutions")
+	  public List<Solutionofproblem> getsolutions (@RequestBody Getsolutionvalidation gsvl )
+	  {
+		  System.out.println("insdie");
+		  List<Solutionofproblem> lst =  solutionproblemService.getslotionlist(gsvl);
+		  return lst ;
+	  }
+	  
+	
 	
 	
 }

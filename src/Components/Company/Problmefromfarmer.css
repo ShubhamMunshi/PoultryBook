@@ -42,7 +42,9 @@
  }
 
  .mainprobmlfromfarmer tr>td img{
-    width: 50%;
+   display: block;
+   margin: auto;
+    width: 60%;
  }
 
  /* .mainprobmlfromfarmer tr>td img:hover{
@@ -74,5 +76,31 @@
  
  .enlarged {
    position: relative;
-   transform: scale(2); 
+   transform: scale(4); 
  }
+
+
+
+ .mainprobmlfromfarmer tr td button{
+   line-height: 150%;
+    width: 70%;
+    background-color: rgb(217, 250, 255);
+    color:  rgb(0, 60, 255);
+
+    font-size: larger;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 2px groove whitesmoke;
+    box-shadow: 0 0 5px rgb(0, 0, 0);
+ }
+
+ .mainprobmlfromfarmer tr td button:hover{
+
+   background-color: rgb(255, 170, 0);
+   color: black;
+   border: 2px solid white;
+   transition: all ease 1s;
+
+
+ }
+ 

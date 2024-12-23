@@ -64,7 +64,7 @@ export const FDailyReport = () => {
 
 
   
-  // const apiUrl= 'http://192.168.29.85:8080';
+  
   const [batchId, setbh] = useState(localStorage.getItem("btiddd"))
   const [farmerId, stfmid] = useState(localStorage.getItem("pk"));
   const [companyId, stecmpidd] = useState(localStorage.getItem("cboobs"));

@@ -5,6 +5,8 @@ import java.util.List;
 
 import com.dac.project.model.DailyReportData;
 import com.dac.project.model.Dailyrpforfarmerfetch;
+import com.dac.project.model.Farmerreportbyid;
+import com.dac.project.model.Fetchbatch;
 
 
 public interface DailyReportService {
@@ -13,7 +15,7 @@ public interface DailyReportService {
 
 	
 
-	public List<DailyReportData> getDailyReportByBid(String bid);
+	public List<DailyReportData> getDailyReportByBid(Farmerreportbyid farmerreportbyid);
 
 
 

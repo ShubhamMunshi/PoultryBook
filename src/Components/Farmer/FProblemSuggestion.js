@@ -1,12 +1,13 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./FProblemSuggestion.css" ;
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import { Link } from "react-router-dom";
+import { apiUrl } from "../../Api/AllApis";
 export const FProblemSuggestion=()=>
 {
 
-  const apiUrl = "http://localhost:8080";
+  
   // const apiUrl = "http://192.168.29.85:8080";
   
    const[farmerId,setfarmerid]=useState(localStorage.getItem("pk"));
@@ -52,6 +53,25 @@ const handleinfo =(e)=>{
      })
 
 }
+ const obl ={farmerId,companyId,batchId,batchNo}
+
+ const [solutiondata,setsolutiondata] =useState([]);
+  useEffect(()=>{
+
+    if(batchId!==undefined && batchId!==null&& !isNaN(batchId) && batchNo!==undefined && batchNo!==null && !isNaN(batchNo) )  
+       {
+               
+         axios.post(`${apiUrl}/getsolutions`,obl).then((res)=>{
+                      setsolutiondata(res.data);
+                      console.log(solutiondata);
+        })
+       
+      }
+      
+      
+
+  },[])
+
        
         
     return(<>
@@ -78,7 +98,7 @@ const handleinfo =(e)=>{
             //   setprobimg(res.data);
             //   toast.success("image uploaded successfully!!",toast.POSITION.TOP_RIGHT);
             // })
-            axios.post('http://localhost:8080/uploadproblem', formData).then((res)=>{
+            axios.post('http://localhost:8081/uploadproblem', formData).then((res)=>{
               setprobimg(res.data);
               toast.success("image uploaded successfully!!",toast.POSITION.TOP_RIGHT);
             })
@@ -95,10 +115,27 @@ const handleinfo =(e)=>{
         <div id="sugges"> 
       <h1>Suggetions from Company </h1>
        <form>
-        <table id="tb2">
-            <tr><td>Sr.No</td><td>ID</td><td>Date</td><td>Problem</td><td>Solution</td></tr>
-            <tr><td></td><td>{}</td><td>{}</td><td> </td><td> </td></tr>
-        </table>
+       <table id="tb2">
+  <tbody>
+    <tr>
+      <td>ProblemId</td>
+      <td>BatchNo</td>
+      <td>Problem</td>
+      <td>Remark</td>
+      <td>Solution</td>
+    </tr>
+    {solutiondata.map((info) => (
+      <tr key={info.solutionId}>
+        <td>{info.problemId }</td>
+        <td>{info.batchNo}</td>
+        <td>{info.problem}</td>
+        <td>{info.remark}</td>
+        <td>{info.solution}</td>
+      </tr>
+    ))}
+  </tbody>
+</table>
+
        </form>
     
     <Link to="/Farmerlogin/dashboard" id="oiu"></Link>

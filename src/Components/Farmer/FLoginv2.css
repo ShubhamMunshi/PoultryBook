@@ -1,20 +1,26 @@
 .flbodyyy-form{
-   border: 1px solid black;
+   border: 1px inset black;
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
    width: 20%;
-   margin-left: auto;
-   margin-right: 60%;
+   /* margin-left: auto; */
+   /* margin-right: 60%; */
    /* margin-top: 5%; */
    padding: 4%;
+   /* display: block; */
+   margin: auto;
 
-   background-color: rgba(255, 255, 255, 0.148); /* Adjust the alpha value for transparency */
+   background-color: rgb(219, 238, 255); /* Adjust the alpha value for transparency */
   backdrop-filter: blur(1px); /* Apply the glass-like effect */
 
-  border-radius: 20px;
+  border-radius: 25px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+  border: 1px solid #ccc;
+ 
+    box-shadow: inset 0 3px 15px rgba(0,0,0,.5), 0 4px 6px rgba(0,0,0,0.45);
 }
 
 .flbodyyy-heading{
@@ -53,10 +59,13 @@
 }
 
 #flbodyyy{
+  display: block;
+  margin: auto;
     padding-top: 10%;
     padding-bottom: 20%;
     /* background-image: url(../../Images/benjamin-davies-Zm2n2O7Fph4-unsplash.jpg); */
-    background-image: url(../../Images/31189.jpg);
+    /* background-image: url(../../Images/31189.jpg); */
+    background: linear-gradient(to bottom,rgb(18, 101, 255) 10%,white 100%);
     background-size: cover;
     font-size: large;
     font-variant: small-caps;

@@ -30,6 +30,12 @@ import { useEffect } from 'react';
 import { NavV1 } from './Components/Navbar/NavV1';
 import { Problmefromfarmer } from './Components/Company/Problmefromfarmer';
 import { MyComponent } from './Components/Company/DemoFramer';
+import { Suggestion } from './Components/Company/Suggestion';
+import { Emailverification } from './Components/Company/Emailverification';
+import { Learningfarmer } from './Components/Farmer/Learningfarmer';
+import { Customerregister } from './Components/Customer/Customerregister';
+import { Customerlist } from './Components/Customer/Customerlist';
+
 
 
 
@@ -67,6 +73,11 @@ function App() {
       <Route path='/GetFarmerDailyReport' element={<FamerDailyRpDisp/>}/>
       <Route path='/Getreportforfarmer' element={<Getreport/>} />
       <Route path='/farmerproblems' element={<Problmefromfarmer/>} />
+      <Route path='/gievsuggestinforprob' element={<Suggestion/>}/>
+      <Route path='/verifycompany' element={<Emailverification/>}/>
+      <Route path='/learnforfarmer' element={<Learningfarmer/>}/>
+      <Route path='/customerregister' element={<Customerregister/>}/>
+      <Route path='/customers' element={<Customerlist/>}/>
     </Routes>
   </Router>
 </div> );
